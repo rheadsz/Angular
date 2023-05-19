@@ -1,0 +1,65 @@
+#msg{
+
+    margin-left: 280px;
+    margin-top: 30px;
+  
+}
+.roomListing{
+    margin-bottom: 20px;
+}
+.noOfRooms{
+    margin-left: 50px;
+}
+.bg{
+    background-color: rgb(39, 38, 38);
+    width: 50%;
+    margin-left: 280px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    }
+    label{
+    color: white;
+    margin-left: 280px;
+    }
+    input{
+    margin-left: 220px;
+    margin-bottom: 10px;
+    }
+    button{
+        margin-left: 280px;
+    
+    }
+    button:active{
+        transform: translateY(4px);
+    }
+    .display{
+        margin-left: 50px;
+    }
+    #confirm-btn{
+        margin-bottom: 10px;
+    }
+    button:hover{
+        background-color: rgb(203, 18, 18);
+    }
+    .footer{
+        background-color: black;
+    }
+    .social-icons-footer{
+        margin-top: 40px;
+        margin-left: 10px;;
+        display: flex;
+        justify-content: space-around;
+      }
+      .copyright{
+        display: flex;
+        
+      }
+      #cr-text{
+        margin-top: 85px;
+        margin-left: 10px;
+        color: white;
+      }
+    .btn:hover{
+        transition: all 0.2s ease-in-out;
+        transform: scaleX(1.1);
+    }

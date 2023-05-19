@@ -1,0 +1,29 @@
+.items{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3px;
+}
+li{
+    list-style: none;
+}
+.card{
+    cursor: pointer;
+}
+img{
+    width: 100px;
+}
+.priceDetails{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;  
+    margin-top: 5px; 
+}
+.total{
+    border: 2px solid black;
+    padding: 5px;
+    width: 150px;
+    text-align: center;
+    background-color: rgb(216, 209, 209);
+}
+
+

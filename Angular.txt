@@ -1,0 +1,28 @@
+To create new angular project:
+ng new AppName
+
+To run the app:
+ng serve -o
+
+to create a component:
+ng g c componentName
+
+INTERPOLATRION
+PROPERTY BINDING
+EVENT BINDING
+
+*decorators modify the behavious of a class
+components:custom html tags that can be rendered on the webpage
+
+directives: used to change the appearance of a dom element
+*ngIf -> can be used when you want to display some data in particular cases. its better than using hidden property.
+it wont be visible when you inspect
+
+switch: 4-2-8
+
+pipes are used for data transformation (they dont change the actual object but used to change the format when presenting)
+
+*for each logic we can create different child components
+
+TO RENDER ARRAY OF IMAGES:
+https://stackblitz.com/edit/how-to-render-array-of-images-in-html-view?file=src%2Fapp%2Fapp.component.css,src%2Fapp%2Fapp.component.ts

@@ -1,0 +1,18 @@
+<div class="container">
+    <ul>
+        <ng-container *ngFor="let singlebook of books">
+        
+            <!--<li>
+                <img [src]="book.image" [alt]="book.image" width="100px;">
+                {{ book.name | titlecase}} by {{ book.author | titlecase}}
+                <p>{{ book.amount  | currency:'INR'}}</p>
+            </li>-->
+            <li>
+                <app-book [book]="singlebook"></app-book>
+            </li>
+
+        </ng-container>
+    </ul>
+
+</div>
+

@@ -1,0 +1,17 @@
+<div clas="container">
+    <div class="priceDetails" style="position: sticky;">
+        <div><h3>YOUR CART </h3></div><br>
+        <p class="total"><b>Total: {{getPrice()}}</b></p>
+    </div>
+    <p *ngIf="getCart().length === 0">Your cart is empty!</p>
+    <div *ngIf="getCart().length > 0" class="items">
+        
+        <ul *ngFor="let singlebook of getCart()">
+            <li>
+                 <app-cart-item [book]="singlebook"></app-cart-item>
+            
+            </li>
+        </ul>
+    </div>
+
+</div>

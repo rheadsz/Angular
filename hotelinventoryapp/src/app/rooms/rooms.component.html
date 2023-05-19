@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" /> 
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body class="main-body">
+<h1 id="msg">Book now for a comfortable stay at {{hotelName}}</h1>   <!--displayed using interpolation-->
+
+<div>
+  <button (click)="addRoom()" class="btn btn-primary" style="margin-left: 1090px;margin-bottom: 10px;">Add Room</button>
+</div>
+
+
+
+
+<!--{{ rooms?.availableRooms ?? 'No rooms'}}-->
+
+<div *ngIf="rooms.availableRooms > 0" class="roomListing">
+   <app-rooms-list [rooms]="roomsList"
+   (selectedRoom)="selectRoom($event)"></app-rooms-list>
+   <!--$event is event received from child component-->
+</div>
+
+
+
+<div *ngIf="selectedRoom">
+    <h2 class="display"><b>You have selected a {{ selectedRoom.roomType}}, Press submit to confirm </b></h2><br>
+     <!--DETAILS OF THE ROOM: {{ selectedRoom | json}}   using pipe to display the info of selected room using json-->
+    <div class="bg">
+        <form>
+          <label for="roomType">ROOM TYPE:</label><br>
+          <input type="text" id="fname" name="fname" value="{{selectedRoom.roomType }}"><br><br>
+          <label for="roomPrice">ROOM PRICE:</label><br>
+          <input type="text" id="lname" name="lname" value="{{selectedRoom.price}}"><br><br>
+          <button id="confirm-btn" type="submit" value="Submit" class="btn btn-primary" (click)="confirmAlert()">SUBMIT</button>
+        </form> 
+        </div>
+</div>
+
+
+<!--<button (click) = toggle()>Click me</button>-->
+<footer class="footer">
+        
+
+  <p style="color: white; margin-left: 20px; margin-top: 30px;">How can we help?</p>
+  <h3 style="color: white;">+1-800-HILTONS</h3>
+  <p style="color: white; margin-left: 20px">Call us, it's toll free</p>
+  <ul>
+   <li class="social-icons-footer">
+       <a href="https://www.facebook.com/Hilton/"><i class="fab fa-facebook" style="font-size:38px;color:white;"></i></a>
+       <a href="https://www.instagram.com/hiltonhotels/"><i class="fab fa-instagram" style="font-size:38px;color:white;"></i></a>
+       <a href="https://twitter.com/hiltonhotels"><i class="fab fa-twitter" style="font-size:38px;color:white;"></i></a>
+       <a href="https://www.pinterest.com/hiltonhotels/"><i class="fab fa-pinterest" style="font-size:38px;color:white;"></i></a>
+   </li>
+  </ul>
+
+  <div class="copyright">
+   <i class="fas fa-copyright" style="font-size:13px;color:white; margin-left: 20px; margin-top: 90px;"></i>
+   <p id="cr-text">2023 Hilton</p>
+   </div>
+
+ </footer>
+
+</body>

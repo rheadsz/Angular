@@ -1,0 +1,25 @@
+<nav class="navbar sticky-top bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">BOOK STORE</a>
+      <div class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Menu
+      </a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" routerLink="/">Books</a></li>
+        <li><a class="dropdown-item" routerLink="/cart">My Cart</a></li>
+        <ng-container *ngIf="!isAuthenticated()">
+          <li><a class="dropdown-item" routerLink="/login">Login</a></li>
+          <li><a class="dropdown-item" routerLink="/register">Register</a></li>
+        </ng-container>
+        <ng-container *ngIf="isAuthenticated()">
+          <li><a class="dropdown-item">Logout</a></li>
+        </ng-container>
+      </ul>
+    </div>
+    </div>
+</nav>
+<div class="container mt-3">
+<router-outlet></router-outlet>
+
+</div>

@@ -1,0 +1,19 @@
+.navbar{
+    background-color: black;
+    color: white;;
+}
+.nav-right{
+    margin-right: -900px;;
+}
+.dropdown{
+    margin-right: 100px;;
+}
+.dropdown-toggle{
+    margin-right: 20px;;
+}
+@media only screen and (max-width: 600px) {
+
+    .nav-right{
+    margin-right: 0px;;
+}
+}

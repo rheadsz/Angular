@@ -1,0 +1,13 @@
+.item-style{
+    background-color: rgb(241, 241, 244);
+    border: 1px solid rgb(241, 241, 244);
+}
+
+/*@media only screen and (max-width: 900px) {
+    img{
+        width: 100px;;
+    }
+    .item-style{
+        height: 500px;
+    }
+  }*/

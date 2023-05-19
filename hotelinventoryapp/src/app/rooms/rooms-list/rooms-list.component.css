@@ -1,0 +1,17 @@
+tr.sub-items:hover{
+    background-color: rgb(227, 230, 230);
+    
+    transition: all 0.2s ease-in-out;
+    transform: scaleX(1.03);
+    width:1px;
+    height:60px;
+    border-radius:30px;
+    
+    box-shadow: 0px 9px 4px -6px grey;
+
+  
+
+}
+.main-table{
+    border-radius: 20px;
+}

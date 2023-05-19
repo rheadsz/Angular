@@ -1,0 +1,32 @@
+
+<table style="border: 1px solid black;">
+    <tr>
+        <th>ROOM NUMBER</th>
+        <th>ROOM TYPE</th>
+        <th>AMENETIES</th>
+        <th>ROOM PRICE</th>
+        <th>ROOM PICTURE</th>
+        <th>CHECK IN TIME</th>
+        <th>CHECK OUT TIME</th>
+        <th>SELECT ROOM</th>
+       
+    </tr>
+    <!--for loop used to loop through the roomList array-->
+    <tr *ngFor = "let room of rooms" class="sub-items">
+        <td>{{ room.roomNumber}}</td>
+        <td>{{ room.roomType}}</td>
+        <td>{{ room.amneties | titlecase}}</td>
+        <td>{{ room.price | currency: 'INR'}}</td>
+        <td><img id="hroom" [src]='room.photos'/></td>
+        <td>{{ room.checkInTime | date: 'short'}}</td>
+        <td>{{ room.checkOutTime | date: 'short'}}</td>
+       
+        <td>
+            <button class="btn btn-primary"
+            (click)="selectRoom(room)">
+            Select
+            </button>
+        </td>
+        
+    </tr>
+</table>
